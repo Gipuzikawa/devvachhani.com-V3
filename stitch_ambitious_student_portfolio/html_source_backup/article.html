@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architectural Dynamics: The Future of User Interfaces | Alex Chen</title>
+  <meta name="description" content="Alex Chen explores how fluid design philosophies are transforming fintech and digital interface architecture." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary-dim": "#b8c6ea",
+            "error-container": "#93000a",
+            "error-dim": "#ffb4ab",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#44474e",
+            "on-secondary-fixed": "#001d36",
+            "inverse-primary": "#0052ff",
+            "outline-variant": "#44474e",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#33353a",
+            "tertiary-dim": "#bac3ff",
+            "tertiary": "#4c59a9",
+            "primary-fixed": "#dbe1ff",
+            "surface-container": "#1e1f23",
+            "primary-dim": "#b4c5ff",
+            "secondary-fixed-dim": "#b8c6ea",
+            "on-error-container": "#ffdad6",
+            "surface-container-low": "#1a1c1e",
+            "surface-dim": "#111318",
+            "surface-container-lowest": "#0c0e13",
+            "background": "#0b0c10",
+            "surface-bright": "#37393e",
+            "primary": "#0052FF",
+            "on-secondary-container": "#d7e3ff",
+            "on-secondary-fixed-variant": "#3e4759",
+            "surface": "#111318",
+            "on-error": "#690005",
+            "primary-container": "#0041ca",
+            "outline": "#8e9199",
+            "tertiary-container": "#344190",
+            "primary-fixed-dim": "#b4c5ff",
+            "secondary-fixed": "#d7e3ff",
+            "tertiary-fixed": "#dee0ff",
+            "secondary-container": "#3e4759",
+            "on-tertiary-fixed": "#000a42",
+            "on-tertiary-fixed-variant": "#344190",
+            "on-primary-fixed": "#00174a",
+            "on-tertiary-container": "#dee0ff",
+            "on-surface": "#e2e2e6",
+            "on-primary-fixed-variant": "#0041ca",
+            "on-background": "#e2e2e6",
+            "secondary": "#565f71",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#c4c6d0",
+            "surface-container-high": "#282a2f",
+            "surface-tint": "#0052ff",
+            "inverse-on-surface": "#2e3034",
+            "on-primary-container": "#dbe1ff",
+            "tertiary-fixed-dim": "#bac3ff",
+            "inverse-surface": "#e2e2e6",
+            "error": "#ffb4ab"
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0b0c10; color: #e2e2e6; font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-panel { background: rgba(40, 42, 47, 0.4); backdrop-filter: blur(24px); }
+    .text-glow { text-shadow: 0 0 20px rgba(0, 82, 255, 0.3); }
+    .prose-article h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.75rem; color: white; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+    .prose-article h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.25rem; color: #e2e2e6; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose-article p { color: #c4c6d0; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.0625rem; }
+    .prose-article blockquote { border-left: 3px solid #0052FF; padding-left: 1.5rem; margin: 2rem 0; }
+    .prose-article blockquote p { color: #b4c5ff; font-style: italic; font-size: 1.125rem; margin-bottom: 0; }
+    .prose-article ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+    .prose-article ul li { color: #c4c6d0; padding: 0.375rem 0 0.375rem 1.75rem; position: relative; line-height: 1.7; }
+    .prose-article ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 6px; height: 6px; background: #0052FF; border-radius: 9999px; }
+    .reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: #0052FF; z-index: 100; transition: width 0.1s linear; }
+  </style>
+</head>
+<body class="min-h-screen bg-background text-on-background">
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress" class="reading-progress" style="width: 0%"></div>
+
+  <!-- Nav -->
+  <div class="px-4">
+    <nav class="flex justify-between items-center w-full px-6 py-3 bg-slate-900/80 backdrop-blur-2xl rounded-full mt-6 mx-auto max-w-5xl sticky top-4 shadow-2xl shadow-primary/10 z-50">
+      <a href="index.html" class="text-2xl font-black tracking-tighter text-white font-headline">Portfolio.OS</a>
+      <div class="hidden md:flex items-center gap-6 font-headline tracking-tight font-semibold text-sm">
+        <a class="text-on-surface-variant hover:text-white transition-colors hover:scale-105 duration-300" href="index.html">Home</a>
+        <a class="text-on-surface-variant hover:text-white transition-colors hover:scale-105 duration-300" href="projects.html">Projects</a>
+        <a class="text-primary font-bold border-b-2 border-primary pb-1" href="articles.html">Articles</a>
+        <a class="text-on-surface-variant hover:text-white transition-colors hover:scale-105 duration-300" href="me.html">Me</a>
+        <a class="text-on-surface-variant hover:text-white transition-colors hover:scale-105 duration-300" href="contact.html">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="bg-primary text-on-primary font-bold px-6 py-2 rounded-full hover:scale-105 transition-all duration-300 active:scale-95 hidden md:inline-block text-sm">Hire Me</a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full text-on-surface-variant hover:text-white hover:bg-white/10 transition-all" aria-label="Open menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Full-screen Menu -->
+  <div id="mobile-menu" style="display:none" class="fixed inset-0 z-[60] bg-[#0b0c10]/97 backdrop-blur-xl flex-col items-center justify-center gap-8">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 rounded-full text-on-surface-variant hover:text-white hover:bg-white/10 transition-all" aria-label="Close menu">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a class="text-3xl font-headline font-bold text-white hover:text-primary transition-colors" href="index.html">Home</a>
+    <a class="text-3xl font-headline font-bold text-white hover:text-primary transition-colors" href="projects.html">Projects</a>
+    <a class="text-3xl font-headline font-bold text-white hover:text-primary transition-colors" href="articles.html">Articles</a>
+    <a class="text-3xl font-headline font-bold text-white hover:text-primary transition-colors" href="me.html">Me</a>
+    <a class="text-3xl font-headline font-bold text-white hover:text-primary transition-colors" href="contact.html">Contact</a>
+    <a href="contact.html" class="mt-4 bg-primary text-on-primary font-bold px-10 py-4 rounded-full text-xl hover:scale-105 transition-all">Hire Me</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqfr-aNTl0P8oyjZwo1yhHEKcDCElamUX8KfI3dAif7jJx6Zb0L5dvMUhxxTgno2nqmEj_y44gaw5jxaQqipflA5fr2IwiOtxupwQKHFz7ckXJAyEuKu6FWocRc80MJcEq21UZi4Ufr1pj22ekeUbXrBJXOeuLAmdU28WCETStNsPHidHRITAZNL_iiGQDBJEuNoNI3-7RioJSjiwo-WeTv_eJHCTiiJEW7tPYhK7i4QMjZuMdoBmU05r3KZlystddIgpe_480aWhb" alt="Abstract architectural patterns for article hero" class="w-full h-full object-cover opacity-20" />
+      <div class="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
+      <a href="articles.html" class="inline-flex items-center gap-2 text-primary-dim text-sm font-semibold font-label hover:text-primary transition-colors mb-6">
+        <span class="material-symbols-outlined text-base">arrow_back</span>
+        View All Articles
+      </a>
+
+      <div class="flex flex-wrap justify-center gap-2 mb-6">
+        <span class="text-xs bg-primary text-on-primary px-3 py-1.5 rounded-full font-label font-bold">Design Theory</span>
+        <span class="text-xs bg-surface-container-high text-on-surface-variant px-3 py-1.5 rounded-full font-label">Fintech</span>
+        <span class="text-xs bg-surface-container-high text-on-surface-variant px-3 py-1.5 rounded-full font-label">UX Architecture</span>
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-black font-headline text-white leading-tight mb-6">
+        Architectural Dynamics: The Future of User Interfaces
+      </h1>
+
+      <p class="text-on-surface-variant text-xl font-body leading-relaxed max-w-2xl mx-auto mb-10">
+        How fluid design philosophies are transforming fintech and reshaping our relationship with digital architecture — and what it means for the next generation of builders.
+      </p>
+
+      <!-- Author & Meta -->
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <div class="flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZxVJeXlVVt6B1fhobWyV9uOqfrGeR8Zq8yUC3weBWCTC5hWXJR5fTF9imDB0TIalWpoi1OEsN3OUp6k0les9Ivgawefvbk9di06y9kR9nfD0NIX_cA1FgHe7sM-q4O-w1FlXejNUAxvsIa2xf-x266Xxitwghiwd9Mm6m0TPvnKYrr8ubF3Z81BhUToo9B2SRR0qWLfq4PRQxeE9jxT4xSLupiDsYQHU6QDkrRz2I78sHpa74t13L6Z-1eJjrE7yrdNs1EO306o1O" alt="Alex Chen author photo" class="w-10 h-10 rounded-full object-cover" />
+          <div class="text-left">
+            <p class="text-white font-semibold font-headline text-sm">Alex Chen</p>
+            <p class="text-on-surface-variant text-xs font-body">UI/UX Designer</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 text-on-surface-variant text-sm font-body">
+          <span class="material-symbols-outlined text-base">calendar_today</span>
+          December 2024
+        </div>
+        <div class="flex items-center gap-1 text-on-surface-variant text-sm font-body">
+          <span class="material-symbols-outlined text-base">schedule</span>
+          12 min read
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="max-w-3xl mx-auto px-6 pb-20" id="article-body">
+    <div class="prose-article">
+
+      <!-- Hero Image -->
+      <div class="rounded-2xl overflow-hidden mb-10 -mt-4">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4z4bktwTpTzJ4ZZClzzFKmrGILTcLpb8IVjbCa0DHvw5XDdl2wAJTmypvGhPy9ZWl5UREVE84154zH1j--xSSqGEL-j4GGx-g_jSGq9nru-Et688a5sHVbfSyp5hT5ulnmH9-OE8_Y25R3qtozx4sX97uDUKH1S-Y2kM6bxRLtmSf-BPVPznIOSLTDv9pQNYYK7q2O6DQf_ro5GgDKAXD5npzvU73ayycP0D0XTHj" alt="Fluid interface design concept — dynamic UI architecture visualization" class="w-full h-[400px] object-cover" />
+      </div>
+
+      <h2>The Shift Toward Fluid Architecture</h2>
+      <p>For most of the last decade, user interfaces have been governed by a kind of geological certainty — static, predictable, built on grids that don't breathe. We designed systems as if software were furniture: stable, physical, something you place once and leave undisturbed.</p>
+      <p>That metaphor is collapsing. The most interesting interfaces being built today — especially in fintech, where the stakes of clarity and trust are highest — treat the interface not as furniture, but as water. They adapt. They respond to context, to the user's state, to the emotional register of the moment.</p>
+
+      <blockquote>
+        <p>"The interface of the future doesn't present information — it anticipates needs and dissolves friction before it can form."</p>
+      </blockquote>
+
+      <h2>What Fintech Gets Right</h2>
+      <p>Financial applications have long been derided for their conservatism — row after row of numbers, dense with legal obligation and institutional caution. But the new wave of fintech design is doing something quietly radical: it's treating money not as a set of facts to be reported, but as a story to be understood.</p>
+      <p>Consider the way modern budgeting apps surface spending trends. The data doesn't change. What changes is the frame — the system decides which data is most emotionally salient in this moment, for this person, and presents it accordingly. This is fluid architecture in practice.</p>
+
+      <h3>The Three Pillars of Fluid Design</h3>
+      <ul>
+        <li><strong style="color:#e2e2e6">Contextual Awareness:</strong> The interface knows where you are in your journey, not just what screen you're on. State is tracked semantically, not just technically.</li>
+        <li><strong style="color:#e2e2e6">Emotional Responsiveness:</strong> Tone, density, and pacing shift based on the nature of the task. Reviewing a failed transaction feels different from celebrating a savings milestone — the interface should, too.</li>
+        <li><strong style="color:#e2e2e6">Progressive Disclosure:</strong> Information is layered. The surface is clean. Depth is available on demand, never imposed.</li>
+      </ul>
+
+      <h2>Material Design 3 as a Blueprint</h2>
+      <p>Google's Material Design 3 represents the clearest large-scale attempt to codify fluid interface principles into a design system. Its introduction of dynamic color — surfaces that shift hue based on user-selected wallpapers — was widely dismissed as cosmetic. But this misses the point entirely.</p>
+      <p>Dynamic theming is a proof of concept for interface systems that respond to personal context. The wallpaper is just the first input. The logical extension is interfaces that respond to time of day, task category, stress indicators from wearables, and the accumulated context of a relationship between user and product.</p>
+
+      <blockquote>
+        <p>"Design tokens aren't about color values. They're about encoding intent — the difference between 'blue' and 'trust'."</p>
+      </blockquote>
+
+      <h3>The Role of Design Tokens</h3>
+      <p>None of this is possible without a strong semantic token architecture. When your design system encodes intent rather than value — "surface-container" rather than "#1e1f23" — you create the conditions for dynamic adaptation. The token is the contract; the resolved value is a runtime decision.</p>
+      <p>This is the piece most high school and early-career designers miss when they learn design systems. The goal is not to make Figma and code agree on hex values. The goal is to encode the semantics of your visual language so the system can make intelligent decisions at scale.</p>
+
+      <h2>Building for the Next Five Years</h2>
+      <p>If I were starting a design system project today — and in some ways, I am, with every project I take on — I would build for fluidity from day one. That means:</p>
+      <ul>
+        <li>Semantic token architecture with at least three layers of abstraction</li>
+        <li>Component APIs designed for contextual variants, not just visual states</li>
+        <li>Animation systems that treat motion as communication, not decoration</li>
+        <li>Accessibility woven into the architecture, not bolted on at the end</li>
+      </ul>
+      <p>The interfaces that will matter most in the next five years will be the ones that disappear — that become so responsive to human context that users stop noticing them and simply live within them. That's the horizon we're building toward. And from where I'm standing, as a high school designer in 2024, it's never been closer.</p>
+
+    </div>
+
+    <!-- Share & Tags -->
+    <div class="border-t border-outline-variant/20 pt-8 mt-8 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+      <div class="flex flex-wrap gap-2">
+        <span class="text-xs bg-primary/10 text-primary-dim px-3 py-1.5 rounded-full font-label">Design Theory</span>
+        <span class="text-xs bg-surface-container-high text-on-surface-variant px-3 py-1.5 rounded-full font-label">Fintech</span>
+        <span class="text-xs bg-surface-container-high text-on-surface-variant px-3 py-1.5 rounded-full font-label">UX Architecture</span>
+        <span class="text-xs bg-surface-container-high text-on-surface-variant px-3 py-1.5 rounded-full font-label">Design Systems</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-on-surface-variant text-sm font-label">Share:</span>
+        <a href="#" class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all" aria-label="Share on Twitter">
+          <span class="material-symbols-outlined text-base">share</span>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all" aria-label="Copy link">
+          <span class="material-symbols-outlined text-base">link</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Author Card -->
+    <div class="glass-panel border border-outline-variant/20 rounded-2xl p-6 mt-8 flex flex-col sm:flex-row gap-5 items-start">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZxVJeXlVVt6B1fhobWyV9uOqfrGeR8Zq8yUC3weBWCTC5hWXJR5fTF9imDB0TIalWpoi1OEsN3OUp6k0les9Ivgawefvbk9di06y9kR9nfD0NIX_cA1FgHe7sM-q4O-w1FlXejNUAxvsIa2xf-x266Xxitwghiwd9Mm6m0TPvnKYrr8ubF3Z81BhUToo9B2SRR0qWLfq4PRQxeE9jxT4xSLupiDsYQHU6QDkrRz2I78sHpa74t13L6Z-1eJjrE7yrdNs1EO306o1O" alt="Alex Chen author photo" class="w-16 h-16 rounded-2xl object-cover flex-shrink-0" />
+      <div>
+        <p class="text-white font-black font-headline text-lg">Alex Chen</p>
+        <p class="text-primary-dim text-sm font-label mb-2">UI/UX Designer · High School Junior</p>
+        <p class="text-on-surface-variant text-sm font-body leading-relaxed">I write about design systems, accessibility, and the intersection of technology with everyday human experience. Currently building things at the edge of what high school designers usually attempt.</p>
+        <a href="me.html" class="inline-flex items-center gap-1 text-primary font-semibold text-sm font-label mt-3 hover:gap-2 transition-all">
+          More about me <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Related Articles -->
+  <section class="max-w-7xl mx-auto px-6 pb-20">
+    <div class="border-t border-outline-variant/10 pt-12">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-black font-headline text-white">Related Articles</h2>
+        <a href="articles.html" class="text-primary font-semibold text-sm font-label flex items-center gap-1 hover:gap-2 transition-all">
+          All Articles <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-surface-container-high rounded-2xl overflow-hidden border border-outline-variant/20 hover:border-primary/30 transition-all duration-300 group">
+          <div class="aspect-video overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOwugENrrYTgxevQD0UmiMf3ytmHZkYl4PwX3NScPqDM96P-3Hm3xv1f_8bCkX1il6YwQpGMsX3S4DG2MPiSW3wwqRigL31WqWQrM-U2LmgTe7vrSkSa4kE0F8MIJiwJV-9mhMsh3kOVal53BfbNGa7e2xj19mCnByfTmk1amtgJWzrA9j9afjvXp_Bc9GLcJHUxQ86Va5HdAzpq60fb-tcSC_7SO2BQEm6cuTbGE5ulkVeynhEtW1YIS6TJCxfYg1qE-IJR1mEned" alt="Design tokens and systems article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-xs text-primary-dim font-label">Design Systems · 9 min</span>
+            <h3 class="text-base font-bold font-headline text-white mt-1 mb-3 leading-snug group-hover:text-primary-dim transition-colors">Why Design Tokens Are the Future of Scalable UI</h3>
+            <a href="article.html" class="text-primary font-semibold text-sm font-label flex items-center gap-1 hover:gap-2 transition-all">
+              Read More <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="bg-surface-container-high rounded-2xl overflow-hidden border border-outline-variant/20 hover:border-primary/30 transition-all duration-300 group">
+          <div class="aspect-video overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtSYMXBI041ZX76Oltq0eIZ_bW7zhJxJvPoMG6uIduCxp80awf1_lT7wE3TbQM5wwKTkvetnljoVryrV3baHnMnVI06TnRTFORpvu68p_FNchT-GGpvZuGkqveVE8DZYj5oR_YDuVz8Os4185-VoTLYajWO4gxLgNNv5188989gCHxRcARyNpc7vw4SO3TIidvafUj-fiFRVgWv2dMqVRPLwLADvzYUC3eijsdZQYnDGY4ZqgUuJsrY9IHdrdhlrBHFwzT-ChmKvTu" alt="Persuasive design ethics article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-xs text-tertiary-dim font-label">Ethics · 6 min</span>
+            <h3 class="text-base font-bold font-headline text-white mt-1 mb-3 leading-snug group-hover:text-primary-dim transition-colors">The Ethics of Persuasive Design</h3>
+            <a href="article.html" class="text-primary font-semibold text-sm font-label flex items-center gap-1 hover:gap-2 transition-all">
+              Read More <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="bg-surface-container-high rounded-2xl overflow-hidden border border-outline-variant/20 hover:border-primary/30 transition-all duration-300 group">
+          <div class="aspect-video overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC3Eh9-HJ700jmgiaoKs7x4D5lUgMsAjOOqGTom_VqT-kpGvx3sfWWs3ZMzRMqxAXS_CVdFEA5hzLB-y28Ra8qCpsFJrtIG4AkRJAREMhRB1KNyD57U41iqor8YCnqkgMWcRl-w2f2HVaq3HzXdyvUQpfs5NEnWtS-xpuTi-f1hYyFS-m0tQndUHptvDY_LX3X1IO2SYyk5RtWB6liBdBt4Plzc0qgGF3lGL7yu11Rb883SZsVm4o2qd6vwnAARuigfqfWd5XzPxsm" alt="Cognitive dissonance UX article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-xs text-secondary-dim font-label">Psychology · 8 min</span>
+            <h3 class="text-base font-bold font-headline text-white mt-1 mb-3 leading-snug group-hover:text-primary-dim transition-colors">Cognitive Dissonance in Modern UX</h3>
+            <a href="article.html" class="text-primary font-semibold text-sm font-label flex items-center gap-1 hover:gap-2 transition-all">
+              Read More <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="max-w-7xl mx-auto py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-outline-variant/10 gap-6 mt-8">
+    <div class="text-center md:text-left">
+      <span class="text-xl font-black tracking-tighter text-white font-headline">Portfolio.OS</span>
+      <p class="text-on-surface-variant font-body text-xs uppercase tracking-widest mt-2">© 2025 Alex Chen. Designed with Kinetic Precision.</p>
+    </div>
+    <div class="flex gap-8">
+      <a class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm uppercase tracking-widest" href="#">LinkedIn</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm uppercase tracking-widest" href="#">GitHub</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm uppercase tracking-widest" href="#">Dribbble</a>
+    </div>
+  </footer>
+
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', function() {
+    var article = document.getElementById('article-body');
+    if (!article) return;
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = Math.min((scrollTop / docHeight) * 100, 100);
+    document.getElementById('reading-progress').style.width = progress + '%';
+  });
+
+  // Mobile menu
+  (function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var close = document.getElementById('mobile-menu-close');
+    if (btn && menu && close) {
+      btn.addEventListener('click', function() { menu.style.display = 'flex'; menu.style.flexDirection = 'column'; menu.style.alignItems = 'center'; menu.style.justifyContent = 'center'; });
+      close.addEventListener('click', function() { menu.style.display = 'none'; });
+      menu.addEventListener('click', function(e) { if (e.target === menu) menu.style.display = 'none'; });
+    }
+  })();
+</script>
+</body>
+</html>

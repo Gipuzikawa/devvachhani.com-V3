@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:/Users/devvv/OneDrive/Documents/03 - Projects/devvachhani.com-V3/stitch_ambitious_student_portfolio/html_source_backup\")",
+      "Bash(mv index.html projects.html articles.html article.html contact.html me.html stitch_ambitious_student_portfolio/html_source_backup/)",
+      "Bash(npm create:*)",
+      "Bash(cp:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Colors */
+  --color-background: #0b0c10;
+  --color-surface: #111318;
+  --color-surface-dim: #111318;
+  --color-surface-bright: #37393e;
+  --color-surface-variant: #44474e;
+  --color-surface-container-lowest: #0c0e13;
+  --color-surface-container-low: #1a1c1e;
+  --color-surface-container: #1e1f23;
+  --color-surface-container-high: #282a2f;
+  --color-surface-container-highest: #33353a;
+  --color-primary: #0052FF;
+  --color-primary-dim: #b4c5ff;
+  --color-primary-fixed: #dbe1ff;
+  --color-primary-fixed-dim: #b4c5ff;
+  --color-primary-container: #0041ca;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #00174a;
+  --color-on-primary-fixed-variant: #0041ca;
+  --color-on-primary-container: #dbe1ff;
+  --color-inverse-primary: #0052ff;
+  --color-secondary: #565f71;
+  --color-secondary-dim: #b8c6ea;
+  --color-secondary-fixed: #d7e3ff;
+  --color-secondary-fixed-dim: #b8c6ea;
+  --color-secondary-container: #3e4759;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #001d36;
+  --color-on-secondary-fixed-variant: #3e4759;
+  --color-on-secondary-container: #d7e3ff;
+  --color-tertiary: #4c59a9;
+  --color-tertiary-dim: #bac3ff;
+  --color-tertiary-fixed: #dee0ff;
+  --color-tertiary-fixed-dim: #bac3ff;
+  --color-tertiary-container: #344190;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #000a42;
+  --color-on-tertiary-fixed-variant: #344190;
+  --color-on-tertiary-container: #dee0ff;
+  --color-error: #ffb4ab;
+  --color-error-dim: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+  --color-outline: #8e9199;
+  --color-outline-variant: #44474e;
+  --color-on-surface: #e2e2e6;
+  --color-on-surface-variant: #c4c6d0;
+  --color-on-background: #e2e2e6;
+  --color-surface-tint: #0052ff;
+  --color-inverse-surface: #e2e2e6;
+  --color-inverse-on-surface: #2e3034;
+
+  /* Border radius */
+  --radius-DEFAULT: 1rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-headline: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #0b0c10;
+    color: #e2e2e6;
+    font-family: "Inter", sans-serif;
+  }
+  ::selection {
+    background-color: #0041ca;
+    color: #dbe1ff;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(40, 42, 47, 0.4);
+    backdrop-filter: blur(24px);
+  }
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 82, 255, 0.3);
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .prose-article h2 {
+    font-family: "Plus Jakarta Sans Variable", sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: white;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .prose-article h3 {
+    font-family: "Plus Jakarta Sans Variable", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #e2e2e6;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-article p {
+    color: #c4c6d0;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+  }
+  .prose-article blockquote {
+    border-left: 3px solid #0052FF;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+  }
+  .prose-article blockquote p {
+    color: #b4c5ff;
+    font-style: italic;
+    font-size: 1.125rem;
+    margin-bottom: 0;
+  }
+  .prose-article ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  .prose-article ul li {
+    color: #c4c6d0;
+    padding: 0.375rem 0 0.375rem 1.75rem;
+    position: relative;
+    line-height: 1.7;
+  }
+  .prose-article ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 6px;
+    height: 6px;
+    background: #0052FF;
+    border-radius: 9999px;
+  }
+}
