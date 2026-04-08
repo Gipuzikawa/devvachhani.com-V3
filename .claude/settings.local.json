@@ -13,7 +13,8 @@
       "Bash(npm list:*)",
       "Bash(codex:*)",
       "Bash(python3:*)",
-      "Skill(codex:setup)"
+      "Skill(codex:setup)",
+      "Skill(codex:rescue)"
     ]
   }
 }
