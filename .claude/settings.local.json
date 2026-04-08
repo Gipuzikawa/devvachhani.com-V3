@@ -14,7 +14,8 @@
       "Bash(codex:*)",
       "Bash(python3:*)",
       "Skill(codex:setup)",
-      "Skill(codex:rescue)"
+      "Skill(codex:rescue)",
+      "WebSearch"
     ]
   }
 }

@@ -1,5 +1,32 @@
 # AGENTS.md
 
+## Codex Context (read this first)
+
+This is a React 19 + Vite + TypeScript + Tailwind v4 SPA — a portfolio site for **Dev Vachhani**.
+
+### Commands
+- Dev server: `npm run dev`
+- Build: `npm run build`
+- Lint: `npm run lint`
+
+### Done = build passes + lint passes
+Always run `npm run build && npm run lint` before finishing a task.
+
+### Key files
+- Routes: `src/App.tsx`
+- Data (source of truth): `src/data/person.ts`, `src/data/projects.ts`, `src/data/articles.ts`
+- Styles/tokens: `src/styles/globals.css`
+- Types: `src/types/index.ts`
+- Shared layout: `src/layouts/PageLayout.tsx`
+
+### Rules
+- Never use "Alex Chen" — the persona is Dev Vachhani
+- Do not modify `src/styles/globals.css` design tokens unless the task explicitly targets the design system
+- Keep data files and types in sync if you change a schema
+- Background: `#0b0c10`, Primary: `#0052FF` — follow the Kinetic Cobalt token system
+
+---
+
 Agent routing and plugin skill guide for Claude Code sessions on this portfolio project.
 
 ---
