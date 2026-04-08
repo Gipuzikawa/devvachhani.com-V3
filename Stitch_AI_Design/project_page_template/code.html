@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Synthesis Patterns - Project Detail</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#001d36",
+                        "primary": "#0052ff",
+                        "secondary": "#565f71",
+                        "primary-container": "#0041ca",
+                        "on-primary-fixed": "#00174a",
+                        "secondary-dim": "#b8c6ea",
+                        "on-primary-fixed-variant": "#0041ca",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#dbe1ff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-surface-variant": "#c4c6d0",
+                        "surface-container-highest": "#33353a",
+                        "surface-container-high": "#282a2f",
+                        "on-error": "#690005",
+                        "surface-dim": "#111318",
+                        "background": "#0b0c10",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3e4759",
+                        "surface-container-low": "#1a1c1e",
+                        "on-tertiary-fixed": "#000a42",
+                        "error-dim": "#ffb4ab",
+                        "on-surface": "#e2e2e6",
+                        "tertiary-fixed-dim": "#bac3ff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#44474e",
+                        "inverse-on-surface": "#2e3034",
+                        "surface-container": "#1e1f23",
+                        "surface": "#0b0c10",
+                        "on-tertiary-container": "#dee0ff",
+                        "on-tertiary-fixed-variant": "#344190",
+                        "error-container": "#93000a",
+                        "surface-tint": "#0052ff",
+                        "surface-bright": "#37393e",
+                        "surface-variant": "#44474e",
+                        "on-secondary-container": "#d7e3ff",
+                        "outline": "#8e9199",
+                        "inverse-surface": "#e2e2e6",
+                        "tertiary-dim": "#bac3ff",
+                        "surface-container-lowest": "#0c0e13",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#d7e3ff",
+                        "secondary-fixed-dim": "#b8c6ea",
+                        "tertiary": "#4c59a9",
+                        "inverse-primary": "#0052ff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#dee0ff",
+                        "secondary-container": "#3e4759",
+                        "on-background": "#e2e2e6",
+                        "tertiary-container": "#344190",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "primary-dim": "#b4c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 82, 255, 0.4);
+        }
+        .glass-panel {
+            background: rgba(40, 42, 47, 0.4);
+            backdrop-filter: blur(24px);
+        }
+        .pill-shaped { border-radius: 9999px; }
+        .floating-dock { box-shadow: 0 25px 50px -12px rgba(0, 82, 255, 0.2); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-8 py-3 flex justify-between items-center bg-[#0b0c10]/40 backdrop-blur-2xl mt-4 rounded-full shadow-2xl shadow-blue-900/20">
+<div class="text-2xl font-black text-[#0052FF] tracking-tighter font-['Plus_Jakarta_Sans']">Kinetic Cobalt</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-gray-400 font-medium hover:scale-105 hover:text-white transition-all duration-300" href="#">Home</a>
+<a class="text-[#0052FF] font-extrabold border-b-2 border-[#0052FF] pb-1 hover:scale-105 hover:text-white transition-all duration-300" href="#">Projects</a>
+<a class="text-gray-400 font-medium hover:scale-105 hover:text-white transition-all duration-300" href="#">Articles</a>
+<a class="text-gray-400 font-medium hover:scale-105 hover:text-white transition-all duration-300" href="#">Me</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-bold scale-95 active:opacity-80 transition-transform hover:scale-105">Connect</button>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto space-y-32">
+<!-- Hero Section -->
+<section class="relative group">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-surface-container-high border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-label tracking-widest uppercase text-primary">Case Study • 2024</span>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold tracking-tighter text-glow">
+                        Neural Synthesis <br/>
+<span class="text-primary">Patterns</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
+                        An autonomous architectural framework that maps complex neural behaviors into generative crystalline structures for high-performance spatial design.
+                    </p>
+</div>
+<div class="lg:col-span-4 flex justify-end">
+<div class="flex flex-col gap-4 text-right">
+<div class="text-sm font-label uppercase tracking-widest text-secondary">Role</div>
+<div class="text-lg font-semibold">Lead Architect</div>
+<div class="h-px w-12 bg-primary ml-auto mt-2"></div>
+<div class="text-sm font-label uppercase tracking-widest text-secondary mt-4">Duration</div>
+<div class="text-lg font-semibold">6 Months</div>
+</div>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="mt-16 relative overflow-hidden rounded-xl aspect-[21/9]">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Abstract generative art with deep blue and black crystalline patterns glowing with neon electric highlights in a dark void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC4plstXK0rcQJrRo0vF8eVwTD8KTC_DQdKwUoeIjvEguloFZlSzy3IdKwUV5GRPc1f5pnoP4g_8zZx6CjMDJzAVxhLdvwqnALDhcfdTd0VV06cfpVdUnBDn24a9fNU42EP9RZeIR8kOvlppGBWff_PWMTr9Lml_f-VNF-7MAZJMBZa_7pNwBlYVssyUK22o5OsekjTCVRE65WKGwPZLEjBliFxR4ocr8P5-BxpeD1oorEjekIj7Msr3pdcty9VMoypApneCFrw-Dy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</section>
+<!-- Project Overview (The Mission) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-4 space-y-6">
+<h2 class="text-4xl font-headline font-extrabold tracking-tight">The Mission</h2>
+<div class="w-16 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 gap-12">
+<div class="space-y-6">
+<p class="text-xl text-on-surface leading-relaxed font-light">
+                        Neural Synthesis Patterns was conceived as the bridge between theoretical generative art and the physical constraints of autonomous fabrication. We focused on the transition from latent space mathematics to real-world robotic execution, ensuring that every crystalline vertex generated by the neural engine could be physically realized by high-precision six-axis industrial arms.
+                    </p>
+<p class="text-xl text-on-surface leading-relaxed font-light">
+                        The challenge lay in translating high-dimensional emotional sensory data into structural load-bearing geometries. By integrating a feedback loop between the generative model and robotic stress-test sensors, we achieved a level of execution where the machine doesn't just print a design, but actively compensates for material variance and gravitational forces in real-time, resulting in hyper-optimized, bio-mimetic spatial structures.
+                    </p>
+</div>
+<div class="p-10 bg-primary/5 rounded-2xl border border-primary/20 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[60px] rounded-full -mr-16 -mt-16"></div>
+<div class="relative z-10 flex flex-col md:flex-row gap-8 items-start">
+<div class="bg-primary p-4 rounded-xl shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-3xl">target</span>
+</div>
+<div class="space-y-4">
+<h3 class="text-2xl font-headline font-extrabold text-white">Core Objectives</h3>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
+<li class="flex items-center gap-3 text-on-surface-variant font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                    Autonomous Fabrication Loops
+                                </li>
+<li class="flex items-center gap-3 text-on-surface-variant font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                    Emotional Data Mapping
+                                </li>
+<li class="flex items-center gap-3 text-on-surface-variant font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                    Real-time Structural Correction
+                                </li>
+<li class="flex items-center gap-3 text-on-surface-variant font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                    BIM Software Integration
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Breakdown & Bento -->
+<section class="space-y-12">
+<h2 class="text-3xl md:text-4xl font-headline font-extrabold tracking-tight">Technical Architecture</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Main Tech Card -->
+<div class="md:col-span-2 lg:col-span-3 p-10 bg-surface-container rounded-xl flex flex-col justify-between border border-outline-variant/5">
+<div>
+<div class="material-symbols-outlined text-primary text-4xl mb-6">memory</div>
+<h3 class="text-2xl font-bold mb-4">Neural Engine</h3>
+<p class="text-on-surface-variant mb-8">Custom TensorFlow layers designed for high-dimensional latent space manipulation.</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-background rounded-full text-xs font-bold border border-outline-variant/20">Python</span>
+<span class="px-4 py-2 bg-background rounded-full text-xs font-bold border border-outline-variant/20">TensorFlow</span>
+<span class="px-4 py-2 bg-background rounded-full text-xs font-bold border border-outline-variant/20">PyTorch</span>
+</div>
+</div>
+<!-- Interface Card -->
+<div class="md:col-span-2 lg:col-span-3 p-10 bg-surface-container-high rounded-xl border border-primary/20">
+<div class="material-symbols-outlined text-primary text-4xl mb-6">dashboard</div>
+<h3 class="text-2xl font-bold mb-4">Real-time Visualization</h3>
+<p class="text-on-surface-variant mb-8">A React-based dashboard using Three.js for 60fps rendering of complex vertex shaders.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold">React</span>
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold">Three.js</span>
+<span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold">GLSL</span>
+</div>
+</div>
+<!-- Mini Card 1 -->
+<div class="md:col-span-2 p-8 bg-surface-container-low rounded-xl border border-outline-variant/5 group hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary mb-4 group-hover:text-primary transition-colors">hub</span>
+<h4 class="font-bold">Distributed Processing</h4>
+<p class="text-sm text-on-surface-variant mt-2">Kubernetes clusters managing synthesis nodes.</p>
+</div>
+<!-- Mini Card 2 -->
+<div class="md:col-span-2 p-8 bg-surface-container-low rounded-xl border border-outline-variant/5 group hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary mb-4 group-hover:text-primary transition-colors">database</span>
+<h4 class="font-bold">Data Ingestion</h4>
+<p class="text-sm text-on-surface-variant mt-2">PostgreSQL handling TBs of structural training data.</p>
+</div>
+<!-- Mini Card 3 -->
+<div class="md:col-span-2 p-8 bg-surface-container-low rounded-xl border border-outline-variant/5 group hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary mb-4 group-hover:text-primary transition-colors">security</span>
+<h4 class="font-bold">Privacy Layer</h4>
+<p class="text-sm text-on-surface-variant mt-2">Differential privacy on sensitive sensory input.</p>
+</div>
+</div>
+</section>
+<!-- Project Evolution (Updated Layout) -->
+<section class="space-y-16">
+<div class="text-center space-y-4">
+<h2 class="text-3xl md:text-5xl font-headline font-extrabold tracking-tight">Project Evolution</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">A roadmap from conceptual latent spaces to physical deployment.</p>
+</div>
+<div class="max-w-6xl mx-auto space-y-12 relative">
+<!-- Timeline Vertical Line - Left Aligned -->
+<div class="absolute left-6 md:left-24 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent hidden md:block"></div>
+<!-- Stage 1: Concept -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-2 flex flex-row md:flex-col items-center md:items-end gap-4 md:pr-12 group">
+<div class="text-sm font-label uppercase tracking-widest text-primary font-black order-2 md:order-1">Month 01</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20 shadow-lg shadow-primary/40 z-10 order-1 md:order-2 transition-transform group-hover:scale-125"></div>
+</div>
+<div class="md:col-span-5 p-8 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<h3 class="text-2xl font-headline font-extrabold text-white mb-4">Concept</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed font-light">
+                            The initial phase involved defining the core thesis of neural-spatial interaction. We conducted extensive feasibility studies to validate the possibility of mapping high-dimensional latent patterns into structural CAD formats.
+                        </p>
+</div>
+<div class="md:col-span-5 aspect-video md:aspect-auto h-full rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-500" data-alt="Sketchy, conceptual blueprint of neural networks transitioning into geometric crystal shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz5IqGMp0lB4410nu82W4_wJJRyXBUP2tF_S_CXfSkmxLRtmYUTaYMCJaJLhUBLUuw0lYiURhUyc49tglLu40qhERf0I7bToCNN-pvpQcWIZQ5Y_Hh7049Zv5rpW8ZCkW4o0bxrD1S0TeBxch4kZt1jPH5af9oRGNyVx9GMG1Ckn0vEucuXSH3UNGCNX0m8M_VzcZmbGG7jfQt-fbzr4fAb89OIZ9CNtNsvkK7-K6UUpOpqhel7Dc6Z4xx_Obm20rY7PgXQfnaHVMR"/>
+</div>
+</div>
+<!-- Stage 2: R&D -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-2 flex flex-row md:flex-col items-center md:items-end gap-4 md:pr-12 group">
+<div class="text-sm font-label uppercase tracking-widest text-primary font-black order-2 md:order-1">Month 03</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20 shadow-lg shadow-primary/40 z-10 order-1 md:order-2 transition-transform group-hover:scale-125"></div>
+</div>
+<div class="md:col-span-5 p-8 bg-surface-container-high rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<h3 class="text-2xl font-headline font-extrabold text-white mb-4">R&amp;D Phase</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed font-light">
+                            Model training was the primary focus, utilizing a custom dataset of 50,000+ structural patterns. We developed the specialized neural engine architecture to handle real-time spatial synthesis with extremely low latency.
+                        </p>
+</div>
+<div class="md:col-span-5 aspect-video md:aspect-auto h-full rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-500" data-alt="Glowing neural network nodes with complex data connections in a dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChIl1xes8Zx-zYDSQL-6Th69tPi8K8f46QShyhQIv8iZ43Xu-Iij6czXMNpTxMerIjKsoviHCPOcFw9vblQDp94Wh3hAHAwaSKxv7DL8tN8bPF9EhEwAyWfLl_wJohpJGkFHDycbciqYFLxs57QNHMYcXsZ_BdLSoG3YKlPAaLmgLyWq4eUu0dsAGo3evX8pfnr6_nRWFbqATsNVrc2spHaizgDPSHeUin10MbG-XL8Cme10d1GPM197zBx8FT_QLejWrTrT3rVmIZ"/>
+</div>
+</div>
+<!-- Stage 3: Prototype -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-2 flex flex-row md:flex-col items-center md:items-end gap-4 md:pr-12 group">
+<div class="text-sm font-label uppercase tracking-widest text-primary font-black order-2 md:order-1">Month 05</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20 shadow-lg shadow-primary/40 z-10 order-1 md:order-2 transition-transform group-hover:scale-125"></div>
+</div>
+<div class="md:col-span-5 p-8 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<h3 class="text-2xl font-headline font-extrabold text-white mb-4">Prototype</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed font-light">
+                            Our first working interface integrated a real-time feedback loop between digital mesh generation and sensory input. This milestone successfully rendered our first coherent 3D crystalline structure in a high-fidelity simulator.
+                        </p>
+</div>
+<div class="md:col-span-5 aspect-video md:aspect-auto h-full rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-500" data-alt="A 3D translucent crystalline structure rendered with glowing blue edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiq4Kv6myMyLw7CEuKMlJG9hM9puTDQkUA-7YxpcEbmuFp8lnC-L437Ep_PfFMKrROvZ4PHgBqbt3MJmtuUHzjWy6A02JcpLVgeY8D2IzjD2TG73UHAzbI_pkk3D081qHv60jJsnwooZRLg1R92btOMZpmhDAyDdRnCt40jIilhEiwlp7VD1wjJHfCxHRlEVc9gOkyvg2aQLk3MBJ9B4Fy6K6SuZC1ojPy91zfM34quDWLOawucErD2KfKdsUlxgwMh7tHvDN_uuel"/>
+</div>
+</div>
+<!-- Stage 4: Launch -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-2 flex flex-row md:flex-col items-center md:items-end gap-4 md:pr-12 group">
+<div class="text-sm font-label uppercase tracking-widest text-primary font-black order-2 md:order-1">Month 06</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20 shadow-lg shadow-primary/40 z-10 order-1 md:order-2 transition-transform group-hover:scale-125"></div>
+</div>
+<div class="md:col-span-5 p-8 bg-surface-container-high rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+<h3 class="text-2xl font-headline font-extrabold text-white mb-4">V1.0 Launch</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed font-light">
+                            The official public release of the synthesis engine API and web visualizer. This phase marked the full integration with major BIM software and the successful deployment of the first robotic fabrication node.
+                        </p>
+</div>
+<div class="md:col-span-5 aspect-video md:aspect-auto h-full rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-500" data-alt="Close up of a high-tech robotic arm executing a precision movement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6MKXy0LksQiNQCYS65Ych2WzTPQsmEYwFs0FhMd-d4OKAXn-IiOt3QhqHeVBXzsbtmFpbs_OUXLJ39Lt9cR8zckPBFG2UNQi4nsPvGQH6BxVrvN5kmKDyL8W4NTVJT8ozy8uuTjBqg9D7zJvoFbKXJOHv23CeetHjGvt3meRTu2q2bq1PYkgsvwkyy0mK69RXpeMMbAb7MZb3NTArBA-jLA7AfgRhP9LT6S6T1MqHRJgBu2FLli_ry2VWcxQStYvDXUg3q_lwnJYw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Results -->
+<section class="space-y-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-primary/5 rounded-xl border border-primary/10 overflow-hidden">
+<div class="lg:col-span-5 p-12 space-y-8 flex flex-col justify-center">
+<h2 class="text-4xl font-headline font-extrabold tracking-tight">Impact &amp; Scale</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        The synthesis patterns demonstrated significant performance gains in both design efficiency and user engagement metrics.
+                    </p>
+<button class="bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 w-fit transition-all hover:scale-105 active:scale-95">
+                        Download Report
+                        <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-px bg-primary/20">
+<div class="bg-background/80 p-12 flex flex-col justify-center items-center text-center">
+<span class="text-6xl font-headline font-black text-primary mb-2">92%</span>
+<span class="text-xs font-label uppercase tracking-widest text-secondary">Neural Accuracy</span>
+</div>
+<div class="bg-background/80 p-12 flex flex-col justify-center items-center text-center">
+<span class="text-6xl font-headline font-black text-primary mb-2">4.2x</span>
+<span class="text-xs font-label uppercase tracking-widest text-secondary">Speed Increase</span>
+</div>
+<div class="bg-background/80 p-12 flex flex-col justify-center items-center text-center">
+<span class="text-6xl font-headline font-black text-primary mb-2">12k+</span>
+<span class="text-xs font-label uppercase tracking-widest text-secondary">Generated Models</span>
+</div>
+<div class="bg-background/80 p-12 flex flex-col justify-center items-center text-center">
+<span class="text-6xl font-headline font-black text-primary mb-2">A++</span>
+<span class="text-xs font-label uppercase tracking-widest text-secondary">Efficiency Rating</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-white/5 bg-[#0b0c10]">
+<div class="text-lg font-bold text-white mb-6 md:mb-0">Kinetic Cobalt</div>
+<p class="font-['Inter'] text-sm tracking-widest uppercase text-gray-500 mb-8 md:mb-0">© 2024 Kinetic Cobalt. Built for High Performance.</p>
+<div class="flex gap-8">
+<a class="text-gray-500 font-['Inter'] text-sm tracking-widest uppercase hover:text-[#0052FF] transition-colors opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-gray-500 font-['Inter'] text-sm tracking-widest uppercase hover:text-[#0052FF] transition-colors opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-gray-500 font-['Inter'] text-sm tracking-widest uppercase hover:text-[#0052FF] transition-colors opacity-80 hover:opacity-100" href="#">Github</a>
+<a class="text-gray-500 font-['Inter'] text-sm tracking-widest uppercase hover:text-[#0052FF] transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+</div>
+</footer>
+</body></html>
