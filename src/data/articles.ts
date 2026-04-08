@@ -1,4 +1,4 @@
-wimport type { Article } from '../types'
+import type { Article } from '../types'
 
 export const articles: Article[] = [
   {

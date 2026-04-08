@@ -7,7 +7,12 @@
       "Bash(cp:*)",
       "Bash(npm install:*)",
       "Bash(mkdir:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(node:*)",
+      "Read(//usr/local/bin/**)",
+      "Bash(npm list:*)",
+      "Bash(codex:*)",
+      "Bash(python3:*)"
     ]
   }
 }
