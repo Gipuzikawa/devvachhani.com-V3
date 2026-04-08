@@ -7,7 +7,7 @@ import AccomplishmentCard from '../components/home/AccomplishmentCard'
 const CAROUSEL_SLIDES = [
   {
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBmXFVRR0pGbQQEK2wzIWYn-8sCYf0qR5zlGXKWwRmMPHeGX3hSjN8w4QprMDZMKII1oBo3dRlQ0oqvWse8xyoN7RZ_KJVEzoisknWk3TENAh0mjPCSVwEM3f30roiCrbZHZbr-Mxu5sCSEcToMmW_H6EbVJOsyoR607Ehvw4oARDPxt1f9iLfkg0Jo1-YZJGCpB5UZ4vbT14aRwgI20oOcZADc-460ZaFsuj15MB-atoghRAe52TxWd3zVseZy28Rzme1NzIGLEJrG',
-    alt: 'Alex Chen working on UI design at desk',
+    alt: 'Dev Vachhaniworking on UI design at desk',
   },
   {
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0H7t1HzLerIYeuHhjtWaeHLo16ZaeD-sF9p0PpI0YBbCIeN9CYPBJR9-G6xW2VoQUYA0TXQaX8D8kSeGsOQRzN4H84cGj9Kh9QM5uSnTaa8XJvinzJW1ZbHheqxNFebnBkbqr-fpMsnEzs6N_O0M2H_VF067kTxF3hNvt1JT-YNdgO6ebKuwtaUgPzORYRINcZI682I_X6bnyW6niluxJ72APSWC9uZbGR5PqJDBZcC-3esj70f-rYeUvyBEQiLAeYV_1MrblvXYU',
@@ -28,8 +28,8 @@ export default function HomePage() {
     <>
       <Helmet>
         <title>Dev Vachhani | Portfolio.OS</title>
-        <meta name="description" content="Alex Chen — UI/UX designer and developer. High school student building accessible digital experiences for education and social impact." />
-        <meta property="og:title" content="Alex Chen | Portfolio.OS" />
+        <meta name="description" content="Dev Vachhani— UI/UX designer and developer. High school student building accessible digital experiences for education and social impact." />
+        <meta property="og:title" content="Dev Vachhani| Portfolio.OS" />
         <meta property="og:description" content="High school UI/UX designer building accessible digital experiences for education and social impact." />
         <meta property="og:type" content="website" />
       </Helmet>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import MobileMenuOverlay from '../components/layout/MobileMenuOverlay'
-import Footer from '../components/layout/Footer'
+import  from '../components/layout/'
 import ScrollToTop from '../components/layout/ScrollToTop'
 
 export default function PageLayout() {
@@ -28,7 +28,7 @@ export default function PageLayout() {
       <Navbar onMenuOpen={() => setMenuOpen(true)} />
       <MobileMenuOverlay isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       <Outlet />
-      <Footer />
+      < />
     </>
   )
 }

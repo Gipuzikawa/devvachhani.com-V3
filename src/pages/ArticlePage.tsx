@@ -86,7 +86,7 @@ export default function ArticlePage() {
               <div className="flex items-center gap-3">
                 <img
                   src={person.avatarUrl}
-                  alt="Alex Chen author photo"
+                  alt="Dev Vachhaniauthor photo"
                   className="w-10 h-10 rounded-full object-cover"
                 />
                 <div className="text-left">
@@ -145,7 +145,7 @@ export default function ArticlePage() {
           <div className="glass-panel border border-outline-variant/20 rounded-2xl p-6 mt-8 flex flex-col sm:flex-row gap-5 items-start">
             <img
               src={person.avatarUrl}
-              alt="Alex Chen author photo"
+              alt="Dev Vachhaniauthor photo"
               className="w-16 h-16 rounded-2xl object-cover flex-shrink-0"
             />
             <div>

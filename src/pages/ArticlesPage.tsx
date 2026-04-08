@@ -21,9 +21,9 @@ export default function ArticlesPage() {
   return (
     <>
       <Helmet>
-        <title>Articles | Alex Chen · Portfolio.OS</title>
+        <title>Articles | Dev Vachhani· Portfolio.OS</title>
         <meta name="description" content="Research, thoughts, and stories on technology, social science, and design by Alex Chen." />
-        <meta property="og:title" content="Articles | Alex Chen · Portfolio.OS" />
+        <meta property="og:title" content="Articles | Dev Vachhani· Portfolio.OS" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -42,7 +42,7 @@ export default function ArticlesPage() {
           <div className="flex items-center gap-3 bg-surface-container-high rounded-2xl p-3 max-w-sm">
             <img
               src={person.avatarUrl}
-              alt="Alex Chen author avatar"
+              alt="Dev Vachhaniauthor avatar"
               className="w-12 h-12 rounded-full object-cover flex-shrink-0"
             />
             <div>
