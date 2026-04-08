@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="text-center md:text-left">
         <span className="text-xl font-black tracking-tighter text-white font-headline">Portfolio.OS</span>
         <p className="text-on-surface-variant font-body text-xs uppercase tracking-widest mt-2">
-          © 2025 Alex Chen. Designed with Kinetic Precision.
+          © 2026 Dev Vachhani. Designed with Kinetic Precision.
         </p>
       </div>
       <div className="flex gap-8">

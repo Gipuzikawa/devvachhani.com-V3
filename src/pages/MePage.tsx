@@ -11,9 +11,9 @@ export default function MePage() {
   return (
     <>
       <Helmet>
-        <title>About Me | Alex Chen · Portfolio.OS</title>
-        <meta name="description" content="Learn about Alex Chen — high school junior, UI/UX designer, coding club president, and aspiring technologist." />
-        <meta property="og:title" content="About Me | Alex Chen · Portfolio.OS" />
+        <title>About Me | Dev Vachhani· Portfolio.OS</title>
+        <meta name="description" content="Learn about Dev Vachhani— high school junior, UI/UX designer, coding club president, and aspiring technologist." />
+        <meta property="og:title" content="About Me | Dev Vachhani· Portfolio.OS" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -25,7 +25,7 @@ export default function MePage() {
           <div className="lg:col-span-4">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden aspect-[3/4]">
-                <img src={person.portraitUrl} alt="Alex Chen — portrait photo" className="w-full h-full object-cover" />
+                <img src={person.portraitUrl} alt="Dev Vachhani— portrait photo" className="w-full h-full object-cover" />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 glass-panel border border-primary/20 rounded-2xl px-4 py-3">

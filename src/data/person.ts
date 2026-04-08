@@ -15,10 +15,10 @@ export const person: PersonData = {
     'I care especially about accessibility and inclusive design. Not as a compliance checkbox, but as a core creative challenge. Designing for the edges makes the center better for everyone.',
   ],
   quickFacts: [
-    { icon: 'school', text: 'Junior at Westlake HS, CA' },
-    { icon: 'location_on', text: 'San Francisco Bay Area' },
-    { icon: 'groups', text: 'President, Coding Club' },
-    { icon: 'translate', text: 'English, Mandarin, Spanish' },
+    { icon: 'school', text: 'Year 11 at Nottingham High School, UK' },
+    { icon: 'location_on', text: 'Mansfield, UK' },
+    { icon: 'groups', text: 'Model United Nations, Engineering Society Founder' },
+    { icon: 'translate', text: 'English' },
   ],
   stats: [
     { value: '3+', label: 'Years designing' },

@@ -12,9 +12,9 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact | Alex Chen · Portfolio.OS</title>
-        <meta name="description" content="Get in touch with Alex Chen for freelance work, internship opportunities, or just to say hello." />
-        <meta property="og:title" content="Contact | Alex Chen · Portfolio.OS" />
+        <title>Contact | Dev Vachhani· Portfolio.OS</title>
+        <meta name="description" content="Get in touch with Dev Vachhanifor freelance work, internship opportunities, or just to say hello." />
+        <meta property="og:title" content="Contact | Dev Vachhani· Portfolio.OS" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -62,7 +62,7 @@ export default function ContactPage() {
           <div className="rounded-2xl overflow-hidden aspect-video lg:aspect-square">
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZo8u57aMte50E4WBuw3qSMChnSyHTHVIXaRLGDF5zcQ1y6KNxZEuHS0wDrnxOQ9efuJxasg1tqi6P06aTIJCLuZQTKLKeLeqF9Q_eWJ9fACbuwV1GhhJd7AxKiFlORdXbHP35TjWNDq57fTffj41zEYiSh0EEzYQpnLULHuaxgCU6NnOXEdp_b9cLalkYT7srQ7RR7k-n0wOs-Rp0OJbt_PqhyoD88xN2HYmNzqJ9an2JytkcPpGQFzr5KLTEaGM5ifdIGbOO22kY"
-              alt="Alex Chen design workspace"
+              alt="Dev Vachhanidesign workspace"
               className="w-full h-full object-cover"
             />
           </div>

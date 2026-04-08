@@ -18,9 +18,9 @@ export default function ProjectsPage() {
   return (
     <>
       <Helmet>
-        <title>Projects | Alex Chen · Portfolio.OS</title>
+        <title>Projects | Dev Vachhani· Portfolio.OS</title>
         <meta name="description" content="A timeline of Alex Chen's design and development projects — from neural synthesis research to mobile apps and design systems." />
-        <meta property="og:title" content="Projects | Alex Chen · Portfolio.OS" />
+        <meta property="og:title" content="Projects | Dev Vachhani· Portfolio.OS" />
         <meta property="og:type" content="website" />
       </Helmet>
 

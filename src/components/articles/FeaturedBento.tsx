@@ -13,12 +13,12 @@ export default function FeaturedBento({ featured }: FeaturedBentoProps) {
     <div className="grid grid-cols-1 md:grid-cols-3 md:h-[600px] h-auto gap-4">
       {/* Featured Large Article */}
       {large && (
-        <div className="md:col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer">
+        <div className="md:col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer min-h-[300px]">
           {large.imageUrl && (
             <img
               src={large.imageUrl}
               alt={large.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 min-h-[300px] md:min-h-0"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
@@ -58,7 +58,7 @@ export default function FeaturedBento({ featured }: FeaturedBentoProps) {
               <img
                 src={article.imageUrl}
                 alt={article.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
