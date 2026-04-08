@@ -48,9 +48,9 @@ Canonical source once personalised: `src/data/person.ts`
 | Field | Placeholder (template) | To be replaced with |
 |---|---|---|
 | Name | Dev Vachhani | Dev Vachhani |
-| Role | UI/UX Designer · High School Junior | Dev's actual role |
-| Location | San Francisco Bay Area, CA | Dev's actual location |
-| School | Westlake High School | Dev's actual school |
+| Role | UI/UX Designer · High School Junior | Year 11 Student |
+| Location | San Francisco Bay Area, CA | Mansfield, Nottinghamshire, UK |
+| School | Westlake High School | Nottingham High School |
 | Bio, stats, skills, interests | Sample content | Dev's real content |
 
 ---

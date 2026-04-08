@@ -121,4 +121,6 @@ Read these before making broad product or architecture changes:
 - `docs/Project_Status.md` — milestone state and known gaps
 - `docs/Changelog.md` — milestone history
 - `docs/guide.md` — site-personalization guide
+- `docs/solutions/` — past fixes for hard problems (searched by the learnings-researcher agent)
+- `AGENTS.md` — agent routing guide; which plugin skill or subagent to use for each task type
 
