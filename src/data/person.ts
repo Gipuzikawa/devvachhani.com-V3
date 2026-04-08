@@ -35,38 +35,31 @@ export const person: PersonData = {
   ],
   education: [
     {
-      institution: 'Westlake High School',
-      role: 'Junior · GPA 4.2 (Weighted)',
-      period: '2022 – 2026',
-      description: 'AP Computer Science A, AP Art & Design, AP Statistics, AP English Literature',
+      institution: 'Nottingham High Sshool',
+      role: 'Year 11 · 11 GCSEs',
+      period: '2021 sept. – 2028 jun.',
+      description: '9s: Mathematics, Computer Science, \n Biology, Chemistry, Physics\n8s: English Literature, French, Drama\nA*: English Literature\nA: Additional Mathematics\n7s: Design & Technology',
       accentColor: 'primary',
     },
-    {
-      institution: 'Stanford Pre-Collegiate Studies',
-      role: 'Design & Technology Summer Program',
-      period: 'Summer 2023',
-      description:
-        'Intensive 3-week program covering human-centered design, rapid prototyping, and design thinking methodologies.',
-      accentColor: 'tertiary',
-    },
+    
   ],
   activities: [
     {
-      title: 'Coding Club — President',
+      title: 'Model United Nations',
       description:
-        'Grew membership from 8 to 60+ students. Organized 4 hackathons, 3 industry speaker events.',
-      period: '2023 – Now',
+        'Dominated Conferences, Grow Membership and Awareness in School Communities',
+      period: '2025 – Now',
     },
     {
-      title: 'Design For Good Initiative',
+      title: '10x Young Enterprise Challenge',
       description:
-        'Monthly workshops teaching UX basics to middle schoolers in underserved communities.',
-      period: '2022 – Now',
+        '4 Week challenge where me and my team launched a 3D Printed toys bussiness grossing over £100 in profit',
+      period: '2025',
     },
     {
-      title: 'FIRST Robotics — UX Lead',
+      title: 'Politics, Philosophy & Economics Society',
       description:
-        'Led interface design for robot operator console. Team placed 2nd at Regional Championships.',
+        'Key attendee to talks and contributor to discussions - soon to give talks of my own',
       period: '2022 – 2024',
     },
     {

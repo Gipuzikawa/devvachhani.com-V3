@@ -19,7 +19,7 @@ export default function EducationTimeline({ items }: EducationTimelineProps) {
               >
                 {item.role}
               </p>
-              <p className="text-on-surface-variant text-sm font-body mt-2">{item.description}</p>
+              <p className="text-on-surface-variant text-sm font-body mt-2 whitespace-pre-line">{item.description}</p>
             </div>
             <span className="text-on-surface-variant text-xs font-label flex-shrink-0">{item.period}</span>
           </div>
