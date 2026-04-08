@@ -12,7 +12,8 @@
       "Read(//usr/local/bin/**)",
       "Bash(npm list:*)",
       "Bash(codex:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Skill(codex:setup)"
     ]
   }
 }

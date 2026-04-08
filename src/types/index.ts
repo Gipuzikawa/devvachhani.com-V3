@@ -1,3 +1,33 @@
+export interface TechCard {
+  icon: string
+  title: string
+  description: string
+  tags: string[]
+  variant: 'standard' | 'elevated' | 'mini'
+}
+
+export interface EvolutionStage {
+  month: string
+  title: string
+  description: string
+  imageUrl: string
+  imageAlt: string
+}
+
+export interface MetricItem {
+  value: string
+  label: string
+}
+
+export interface ProjectDetail {
+  role: string
+  mission: string[]
+  objectives: string[]
+  techCards: TechCard[]
+  evolution: EvolutionStage[]
+  metrics: MetricItem[]
+}
+
 export interface Project {
   id: string
   year: number
@@ -12,6 +42,7 @@ export interface Project {
   caseStudyUrl: string
   accentColor?: 'primary' | 'tertiary' | 'yellow'
   award?: string
+  detail?: ProjectDetail
 }
 
 export interface Article {

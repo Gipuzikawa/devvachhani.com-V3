@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Project } from '../../types'
 
 interface ProjectCardProps {
@@ -62,13 +63,13 @@ export default function ProjectCard({ project, side }: ProjectCardProps) {
         </div>
       )}
       <div className={`flex gap-3 ${isLeft ? 'md:justify-end' : ''}`}>
-        <a
-          href={project.caseStudyUrl}
+        <Link
+          to={'/projects/' + project.id}
           className="text-primary font-semibold text-sm font-label flex items-center gap-1 hover:gap-2 transition-all"
         >
           View Case Study{' '}
           <span className="material-symbols-outlined text-base">arrow_forward</span>
-        </a>
+        </Link>
       </div>
       {(project.duration || project.team) && (
         <div className={`flex gap-4 text-on-surface-variant text-xs font-label ${isLeft ? 'md:justify-end' : ''}`}>
@@ -163,13 +164,13 @@ export default function ProjectCard({ project, side }: ProjectCardProps) {
               </div>
             )}
             <div className="flex gap-3">
-              <a
-                href={project.caseStudyUrl}
+              <Link
+                to={'/projects/' + project.id}
                 className="text-primary font-semibold text-sm font-label flex items-center gap-1 hover:gap-2 transition-all"
               >
                 View Case Study{' '}
                 <span className="material-symbols-outlined text-base">arrow_forward</span>
-              </a>
+              </Link>
             </div>
             {(project.duration || project.team) && (
               <div className="flex gap-4 text-on-surface-variant text-xs font-label">
