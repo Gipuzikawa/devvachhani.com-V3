@@ -30,7 +30,7 @@ These are available via the `Agent` tool with `subagent_type`. Claude should use
 
 | Subagent | Use when |
 |---|---|
-| `compound-engineering:research:learnings-researcher` | **Always run before starting a non-trivial task.** Searches `docs/solutions/` for past fixes on the same topic. |
+| `compound-engineering:research:learnings-researcher` | **Always run before starting a non-trivial task.** Searches for past fixes on the same topic. |
 | `compound-engineering:research:repo-research-analyst` | Exploring an unfamiliar area of the codebase before planning. |
 | `compound-engineering:research:framework-docs-researcher` | Fetching version-specific docs for React, Vite, Tailwind, React Router, etc. |
 | `compound-engineering:research:best-practices-researcher` | External guidance on patterns not established in this codebase. |
@@ -69,8 +69,7 @@ These are available via the `Agent` tool with `subagent_type`. Claude should use
 3. Plan        → /ce:plan for anything beyond a trivial edit
 4. Implement   → /codex:rescue (never write source files directly)
 5. Review      → correctness-reviewer + relevant specialist reviewer
-6. Capture     → docs/solutions/ for non-obvious fixes worth preserving
-7. Update      → /update-docs when milestone state changes
+6. Update      → /update-docs when milestone state changes
 ```
 
 ---
@@ -81,7 +80,7 @@ These are available via the `Agent` tool with `subagent_type`. Claude should use
 |---|---|
 | Claude (orchestrator) | Session orientation, routing, review synthesis, decision capture |
 | Codex (`codex:rescue`) | All source file writes and edits |
-| Retro agent | `docs/solutions/` entries after hard-won fixes |
+| Retro agent | Session learnings and institutional knowledge capture |
 | `/update-docs` skill | `docs/Project_Status.md` and `docs/Changelog.md` sync |
 | `ce:plan` skill | Plans written to `docs/plans/YYYY-MM-DD-NNN-*.md` |
 
