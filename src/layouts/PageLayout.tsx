@@ -6,8 +6,9 @@ import Footer from '../components/layout/Footer'
 import ScrollToTop from '../components/layout/ScrollToTop'
 
 export default function PageLayout() {
-  const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const [menuOpenPath, setMenuOpenPath] = useState<string | null>(null)
+  const menuOpen = menuOpenPath === location.pathname
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -17,16 +18,11 @@ export default function PageLayout() {
     }
   }, [menuOpen])
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMenuOpen(false)
-  }, [location.pathname])
-
   return (
     <>
       <ScrollToTop />
-      <Navbar onMenuOpen={() => setMenuOpen(true)} />
-      <MobileMenuOverlay isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      <Navbar onMenuOpen={() => setMenuOpenPath(location.pathname)} />
+      <MobileMenuOverlay isOpen={menuOpen} onClose={() => setMenuOpenPath(null)} />
       <Outlet />
       <Footer />
     </>

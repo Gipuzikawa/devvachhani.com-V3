@@ -1,133 +1,44 @@
-# AGENTS.md
+# Repository Guidelines
 
-## Codex Context (read this first)
+## Project Structure & Module Organization
 
-This is a React 19 + Vite + TypeScript + Tailwind v4 SPA — a portfolio site for **Dev Vachhani**.
+This repository is a React 19 + Vite + TypeScript single-page portfolio site for Dev Vachhani. Application code lives in `src/`, with routing in `src/App.tsx`.
 
-### Commands
-- Dev server: `npm run dev`
-- Build: `npm run build`
-- Lint: `npm run lint`
+- `src/components/`: reusable UI components.
+- `src/pages/`: route-level page components.
+- `src/layouts/`: shared page layout wrappers.
+- `src/data/`: portfolio content sources such as `person.ts`, `projects.ts`, and `articles.ts`.
+- `src/types/`: shared TypeScript contracts. Keep these in sync with data schema changes.
+- `src/styles/`: global styles and Tailwind v4 design tokens.
+- `src/assets/`: imported source assets.
+- `public/`: static files served as-is, including `favicon.svg`, `icons.svg`, `CNAME`, and `_redirects`.
+- `docs/`: project documentation and plans.
 
-### Done = build passes + lint passes
-Always run `npm run build && npm run lint` before finishing a task.
+## Build, Test, and Development Commands
 
-### Key files
-- Routes: `src/App.tsx`
-- Data (source of truth): `src/data/person.ts`, `src/data/projects.ts`, `src/data/articles.ts`
-- Styles/tokens: `src/styles/globals.css`
-- Types: `src/types/index.ts`
-- Shared layout: `src/layouts/PageLayout.tsx`
+- `npm run dev`: start the Vite development server.
+- `npm run build`: run TypeScript project builds, then create the production Vite build.
+- `npm run lint`: run ESLint across the repository.
+- `npm run preview`: preview the production build locally.
 
-### Rules
-- Never use "Alex Chen" — the persona is Dev Vachhani
-- Do not modify `src/styles/globals.css` design tokens unless the task explicitly targets the design system
-- Keep data files and types in sync if you change a schema
-- Background: `#0b0c10`, Primary: `#0052FF` — follow the Kinetic Cobalt token system
+Before finishing a change, run `npm run build` and `npm run lint`.
 
----
+## Coding Style & Naming Conventions
 
-Agent routing and plugin skill guide for Claude Code sessions on this portfolio project.
+Use TypeScript and React function components. Prefer existing local patterns over new abstractions. Name components and layouts with PascalCase, for example `PageLayout.tsx`; name hooks with `use` prefixes, for example `useScrollSpy.ts`; keep data modules in camelCase.
 
----
+ESLint is configured in `eslint.config.js` with TypeScript, React Hooks, and React Refresh rules. Follow the Kinetic Cobalt visual system: background `#0b0c10`, primary `#0052FF`. Do not modify `src/styles/globals.css` design tokens unless the task targets the design system.
 
-## Core Principle
+## Testing Guidelines
 
-Claude orchestrates. Codex implements. Specialist subagents review, research, and design.
+No dedicated test runner or test script is currently configured. For now, treat `npm run build` and `npm run lint` as required verification. If tests are added, place them near the module they cover using `*.test.ts` or `*.test.tsx`, and add an `npm test` script.
 
-Claude should pull from the installed plugin ecosystem rather than doing everything inline. Skipping available agents to do the work manually is slower and produces lower-quality output.
+## Commit & Pull Request Guidelines
 
----
+Use concise, imperative commit subjects such as `Add project detail cards` or `Fix article metadata types`. Keep each commit focused on one logical change.
 
-## Plugin Skill Invocation Rules
+Pull requests should include a short summary, verification results for build and lint, linked issues when applicable, and screenshots or screen recordings for visible UI changes.
 
-Invoke these skills with the `/skill-name` syntax in the Claude Code prompt.
+## Security & Configuration Tips
 
-| Skill | Invoke when | Command |
-|---|---|---|
-| `codex:rescue` | Any source file creation or modification | `/codex:rescue` |
-| `ce:plan` | Non-trivial features requiring design before implementation | `/ce:plan` |
-| `update-docs` | After work that changes project state or adds a completed milestone | `/update-docs` |
-
-### Compound-Engineering Subagents
-
-These are available via the `Agent` tool with `subagent_type`. Claude should use them proactively — do not wait for the user to ask.
-
-#### Research (run before implementing)
-
-| Subagent | Use when |
-|---|---|
-| `compound-engineering:research:learnings-researcher` | **Always run before starting a non-trivial task.** Searches for past fixes on the same topic. |
-| `compound-engineering:research:repo-research-analyst` | Exploring an unfamiliar area of the codebase before planning. |
-| `compound-engineering:research:framework-docs-researcher` | Fetching version-specific docs for React, Vite, Tailwind, React Router, etc. |
-| `compound-engineering:research:best-practices-researcher` | External guidance on patterns not established in this codebase. |
-
-#### Review (run after Codex implements)
-
-| Subagent | Use when |
-|---|---|
-| `compound-engineering:review:correctness-reviewer` | **Default post-implementation pass.** Logic errors, edge cases, intent-vs-implementation gaps. |
-| `compound-engineering:review:kieran-typescript-reviewer` | Any TypeScript change — type safety, generics, inference. |
-| `compound-engineering:review:security-reviewer` | Touches forms, env vars, Formspree, or any external API integration. |
-| `compound-engineering:review:performance-reviewer` | Touches data-heavy list views, carousels, or intersection-heavy scroll effects. |
-| `compound-engineering:review:testing-reviewer` | If/when tests are added to this project. |
-
-#### Design (UI work)
-
-| Subagent | Use when |
-|---|---|
-| `compound-engineering:design:design-iterator` | A UI change isn't visually right after 1–2 attempts. Let it iterate. |
-| `compound-engineering:design:design-implementation-reviewer` | After implementing a component from a reference — verify it matches the Kinetic Cobalt spec. |
-
-#### Planning and workflow
-
-| Subagent | Use when |
-|---|---|
-| `compound-engineering:workflow:spec-flow-analyzer` | New page or feature has non-obvious user flows or edge states. |
-| `compound-engineering:document-review:feasibility-reviewer` | Before implementing a plan that touches data model or routing. |
-
----
-
-## Standard Session Workflow
-
-```
-1. Orient      → Read CLAUDE.md + docs/Project_Status.md
-2. Research    → Run learnings-researcher for the topic
-3. Plan        → /ce:plan for anything beyond a trivial edit
-4. Implement   → /codex:rescue (never write source files directly)
-5. Review      → correctness-reviewer + relevant specialist reviewer
-6. Update      → /update-docs when milestone state changes
-```
-
----
-
-## Agent Ownership Map
-
-| Agent | Owns |
-|---|---|
-| Claude (orchestrator) | Session orientation, routing, review synthesis, decision capture |
-| Codex (`codex:rescue`) | All source file writes and edits |
-| Retro agent | Session learnings and institutional knowledge capture |
-| `/update-docs` skill | `docs/Project_Status.md` and `docs/Changelog.md` sync |
-| `ce:plan` skill | Plans written to `docs/plans/YYYY-MM-DD-NNN-*.md` |
-
----
-
-## What Claude Must NOT Do
-
-- Write source files directly when Codex is available (exception: single-line data edits)
-- Skip `learnings-researcher` before a complex task
-- Mark work complete without at minimum a `correctness-reviewer` pass on Codex output
-- Start implementation before planning when the change touches routing, types, or the data layer
-
----
-
-## Plugin Ecosystem Reference
-
-Installed plugins surfaced in this environment:
-
-- **`codex`** — OpenAI Codex for file implementation (`/codex:rescue`)
-- **`compound-engineering`** — Specialist subagent library: research, review, design, workflow, document-review
-- **`ecc`** — Additional specialist agents: architect, planner, code-reviewer, typescript-reviewer, security-reviewer, performance-optimizer
-
-When the compound-engineering equivalent exists, prefer it. Fall back to `ecc:*` agents when a compound-engineering agent does not cover the domain.
+Do not commit secrets. Use `.env.example` to document required environment variables. Keep third-party form, analytics, or API configuration isolated and reviewed before merging.
